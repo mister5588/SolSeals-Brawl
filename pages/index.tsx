@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import Head from "next/head";
 import { Header } from "../components/navigation/Header";
 import { Main } from "../components/bet/Main";
-import { FlipProvider } from "@rngstudio/flip";
 
 const Index: NextPage = () => {
   return (
@@ -30,18 +29,7 @@ const Index: NextPage = () => {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       {/*Add partner Id wallet here */}
-      <FlipProvider
-        partnerId="5fVWRf1AAhMkrr8mYbej8NjYQkzcz7uTmkoNiW9Wp5M5"
-        network={process.env.NEXT_PUBLIC_NETWORK}
-      >
         <Header />
-
-        <div className="container">
-          <main className="main-content">
-            <Main />
-          </main>
-        </div>
-      </FlipProvider>
     </div>
   );
 };
