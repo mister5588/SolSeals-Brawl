@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import Head from "next/head";
 import { Header } from "../components/navigation/Header";
 import { Stats } from "../components/stats/Stats";
-import { FlipProvider } from "@rngstudio/flip";
 
 const Index: NextPage = () => {
   return (
@@ -32,9 +31,6 @@ const Index: NextPage = () => {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <FlipProvider partnerId="5fVWRf1AAhMkrr8mYbej8NjYQkzcz7uTmkoNiW9Wp5M5" network={process.env.NEXT_PUBLIC_NETWORK}>
-        <Header />
-      </FlipProvider>
 
       <div className="container">
         <main className="main-content">
